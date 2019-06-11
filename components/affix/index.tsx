@@ -263,7 +263,7 @@ class Affix extends React.Component<AffixProps, AffixState> {
     });
 
     let props = omit(this.props, ['prefixCls', 'offsetTop', 'offsetBottom', 'target', 'onChange']);
-    // Omit this since `onTestUpdatePosition` only works on test.
+    // Omit this since `onTestUpdatePosition` only works on tdf.
     if (process.env.NODE_ENV === 'test') {
       props = omit(props, ['onTestUpdatePosition']);
     }

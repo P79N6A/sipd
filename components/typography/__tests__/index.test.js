@@ -158,7 +158,7 @@ describe('Typography', () => {
         });
       }
 
-      copyTest('basic copy', undefined, 'test copy');
+      copyTest('basic copy', undefined, 'tdf copy');
       copyTest('customize copy', 'bamboo', 'bamboo');
     });
 

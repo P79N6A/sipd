@@ -16,6 +16,7 @@ When requiring users to interact with the application, but without jumping to a 
 | --- | --- | --- | --- |
 | afterClose | Specify a function that will be called when modal is closed completely. | function | - |
 | bodyStyle | Body style for modal body element. Such as height, padding etc. | object | {} |
+| cancelButtonProps | The cancel button props | [ButtonProps](/components/button) | - |
 | cancelText | Text of the Cancel button | string\|ReactNode | `Cancel` |
 | centered | Centered Modal | Boolean | `false` |
 | closable | Whether a close (x) button is visible on top right of the modal dialog or not | boolean | true |
@@ -27,10 +28,9 @@ When requiring users to interact with the application, but without jumping to a 
 | mask | Whether show mask or not. | Boolean | true |
 | maskClosable | Whether to close the modal dialog when the mask (area outside the modal) is clicked | boolean | true |
 | maskStyle | Style for modal's mask element. | object | {} |
+| okButtonProps | The ok button props | [ButtonProps](/components/button) | - |
 | okText | Text of the OK button | string\|ReactNode | `OK` |
 | okType | Button `type` of the OK button | string | `primary` |
-| okButtonProps | The ok button props | [ButtonProps](/components/button) | - |
-| cancelButtonProps | The cancel button props | [ButtonProps](/components/button) | - |
 | style | Style of floating layer, typically used at least for adjusting the position. | object | - |
 | title | The modal dialog's title | string\|ReactNode | - |
 | visible | Whether the modal dialog is visible or not | boolean | false |
@@ -59,6 +59,7 @@ The items listed above are all functions, expecting a settings object as paramet
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
 | autoFocusButton | Specify which button to autofocus | null\|string: `ok` `cancel` | `ok` |
+| cancelButtonProps | The cancel button props | [ButtonProps](/components/button) | - |
 | cancelText | Text of the Cancel button | string | `Cancel` |
 | centered | Centered Modal | Boolean | `false` |
 | className | className of container | string | - |
@@ -68,10 +69,9 @@ The items listed above are all functions, expecting a settings object as paramet
 | keyboard | Whether support press esc to close | Boolean | true |
 | mask | Whether show mask or not. | Boolean | true |
 | maskClosable | Whether to close the modal dialog when the mask (area outside the modal) is clicked | Boolean | `false` |
+| okButtonProps | The ok button props | [ButtonProps](/components/button) | - |
 | okText | Text of the OK button | string | `OK` |
 | okType | Button `type` of the OK button | string | `primary` |
-| okButtonProps | The ok button props | [ButtonProps](/components/button) | - |
-| cancelButtonProps | The cancel button props | [ButtonProps](/components/button) | - |
 | title | Title | string\|ReactNode | - |
 | width | Width of the modal dialog | string\|number | 416 |
 | zIndex | The `z-index` of the Modal | Number | 1000 |

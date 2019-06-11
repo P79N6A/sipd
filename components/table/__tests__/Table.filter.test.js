@@ -384,7 +384,7 @@ describe('Table.filter', () => {
           .first()
           .simulate('click');
 
-        // This test can be remove if refactor
+        // This tdf can be remove if refactor
         expect(typeof wrapper.find('FilterMenu').state().selectedKeys[0]).toEqual('string');
 
         dropdownWrapper.find('.confirm').simulate('click');
@@ -395,7 +395,7 @@ describe('Table.filter', () => {
           expect(val).toBe(value);
         });
 
-        // This test can be remove if refactor
+        // This tdf can be remove if refactor
         expect(typeof wrapper.find('FilterMenu').state().selectedKeys[0]).toEqual(typeof value);
 
         // Another time of Filter show

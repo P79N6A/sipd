@@ -62,8 +62,8 @@ moment.locale('zh-cn');
 | placeholder | 输入框提示文字 | string\|RangePicker\[] | - |
 | popupStyle | 额外的弹出日历样式 | object | {} |
 | size | 输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px | string | 无 |
-| suffixIcon | 自定义的选择框后缀图标 | ReactNode | - |
 | style | 自定义输入框样式 | object | {} |
+| suffixIcon | 自定义的选择框后缀图标 | ReactNode | - |
 | onOpenChange | 弹出日历和关闭日历的回调 | function(status) | 无 |
 | onPanelChange | 日历面板切换的回调 | function(value, mode) | - |
 
@@ -78,10 +78,10 @@ moment.locale('zh-cn');
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| defaultValue | 默认日期，如果开始时间或结束时间为 `null` 或者 `undefined`，日期范围将是一个开区间 | [moment](http://momentjs.com/) | 无 |
 | defaultPickerValue | 默认面板日期 | [moment](http://momentjs.com/) | 无 |
+| defaultValue | 默认日期，如果开始时间或结束时间为 `null` 或者 `undefined`，日期范围将是一个开区间 | [moment](http://momentjs.com/) | 无 |
 | disabledTime | 不可选择的时间 | function(date) | 无 |
-| format | 设置日期格式，为数组时支持多格式匹配，展示以第一个为准。配置参考 [moment.js](http://momentjs.com/) | string \| string[] | "YYYY-MM-DD" |
+| format | 设置日期格式，为数组时支持多格式匹配，展示以第一个为准。配置参考 [moment.js](http://momentjs.com/) | string \| string\[] | "YYYY-MM-DD" |
 | mode | 日期面板的状态 | `time|date|month|year|decade` | 'date' |
 | renderExtraFooter | 在面板中添加额外的页脚 | (mode) => React.ReactNode | - |
 | showTime | 增加时间选择功能 | Object\|boolean | [TimePicker Options](/components/time-picker/#API) |
@@ -96,8 +96,8 @@ moment.locale('zh-cn');
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| defaultValue | 默认日期 | [moment](http://momentjs.com/) | 无 |
 | defaultPickerValue | 默认面板日期 | [moment](http://momentjs.com/) | 无 |
+| defaultValue | 默认日期 | [moment](http://momentjs.com/) | 无 |
 | format | 展示的日期格式，配置参考 [moment.js](http://momentjs.com/) | string | "YYYY-MM" |
 | monthCellContentRender | 自定义的月份内容渲染方法 | function(date, locale): ReactNode | - |
 | renderExtraFooter | 在面板中添加额外的页脚 | () => React.ReactNode | - |
@@ -108,20 +108,20 @@ moment.locale('zh-cn');
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| defaultValue | 默认日期 | [moment](http://momentjs.com/) | - |
 | defaultPickerValue | 默认面板日期 | [moment](http://momentjs.com/) | 无 |
+| defaultValue | 默认日期 | [moment](http://momentjs.com/) | - |
 | format | 展示的日期格式，配置参考 [moment.js](http://momentjs.com/) | string | "YYYY-wo" |
+| renderExtraFooter | 在面板中添加额外的页脚 | (mode) => React.ReactNode | - |
 | value | 日期 | [moment](http://momentjs.com/) | - |
 | onChange | 时间发生变化的回调，发生在用户选择时间时 | function(date: moment, dateString: string) | - |
-| renderExtraFooter | 在面板中添加额外的页脚 | (mode) => React.ReactNode | - |
 
 ### RangePicker
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| defaultValue | 默认日期 | [moment](http://momentjs.com/)\[] | 无 |  |
 | defaultPickerValue | 默认面板日期 | [moment](http://momentjs.com/)\[] | 无 |  |
-| disabledTime | 不可选择的时间 | function(dates: \[moment, moment\], partial: `'start'|'end'`) | 无 |  |
+| defaultValue | 默认日期 | [moment](http://momentjs.com/)\[] | 无 |  |
+| disabledTime | 不可选择的时间 | function(dates: \[moment, moment], partial: `'start'|'end'`) | 无 |  |
 | format | 展示的日期格式 | string | "YYYY-MM-DD HH:mm:ss" |  |
 | ranges | 预设时间范围快捷选择 | { \[range: string]: [moment](http://momentjs.com/)\[] } \| { \[range: string]: () => [moment](http://momentjs.com/)\[] } | 无 |  |
 | renderExtraFooter | 在面板中添加额外的页脚 | () => React.ReactNode | - |  |
@@ -129,8 +129,8 @@ moment.locale('zh-cn');
 | showTime | 增加时间选择功能 | Object\|boolean | [TimePicker Options](/components/time-picker/#API) |  |
 | showTime.defaultValue | 设置用户选择日期时默认的时分秒，[例子](#components-date-picker-demo-disabled-date) | [moment](http://momentjs.com/)\[] | \[moment(), moment()] |  |
 | value | 日期 | [moment](http://momentjs.com/)\[] | 无 |  |
-| onCalendarChange | 待选日期发生变化的回调 | function(dates: \[moment, moment\], dateStrings: \[string, string\]) | 无 |  |
-| onChange | 日期范围发生变化的回调 | function(dates: \[moment, moment\], dateStrings: \[string, string\]) | 无 |  |
+| onCalendarChange | 待选日期发生变化的回调 | function(dates: \[moment, moment], dateStrings: \[string, string]) | 无 |  |
+| onChange | 日期范围发生变化的回调 | function(dates: \[moment, moment], dateStrings: \[string, string]) | 无 |  |
 | onOk | 点击确定按钮的回调 | function(dates: [moment](http://momentjs.com/)\[]) | - |  |
 
 <style>

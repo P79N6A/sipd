@@ -37,6 +37,7 @@ subtitle: 导航菜单
 | mode | 菜单类型，现在支持垂直、水平、和内嵌模式三种 | string: `vertical` `horizontal` `inline` | `vertical` |
 | multiple | 是否允许多选 | boolean | false |
 | openKeys | 当前展开的 SubMenu 菜单项 key 数组 | string\[] |  |
+| overflowedIndicator | 自定义 Menu 折叠时的图标 | ReactNode | - |
 | selectable | 是否允许选中 | boolean | true |
 | selectedKeys | 当前选中的菜单项 key 数组 | string\[] |  |
 | style | 根节点样式 | object |  |
@@ -47,7 +48,6 @@ subtitle: 导航菜单
 | onDeselect | 取消选中时调用，仅在 multiple 生效 | function({ item, key, keyPath, selectedKeys, domEvent }) | - |
 | onOpenChange | SubMenu 展开/关闭的回调 | function(openKeys: string\[]) | noop |
 | onSelect | 被选中时调用 | function({ item, key, keyPath, selectedKeys, domEvent }) | 无   |
-| overflowedIndicator | 自定义 Menu 折叠时的图标 | ReactNode | - |
 
 > More options in [rc-menu](https://github.com/react-component/menu#api)
 

@@ -13,16 +13,16 @@ matrix:
   fast_finish: true
   include:
     - env: TEST_TYPE=lint
-    - env: REACT=16 TEST_TYPE=test:dist
-    - env: REACT=16 TEST_TYPE=test:lib
-    - env: REACT=16 TEST_TYPE=test:es
-    - env: REACT=16 TEST_TYPE=test:dom
-    - env: REACT=16 TEST_TYPE=test:node
-    - env: REACT=15 TEST_TYPE=test:dist
-    - env: REACT=15 TEST_TYPE=test:lib
-    - env: REACT=15 TEST_TYPE=test:es
-    - env: REACT=15 TEST_TYPE=test:dom
-    - env: REACT=15 TEST_TYPE=test:node
+    - env: REACT=16 TEST_TYPE=tdf:dist
+    - env: REACT=16 TEST_TYPE=tdf:lib
+    - env: REACT=16 TEST_TYPE=tdf:es
+    - env: REACT=16 TEST_TYPE=tdf:dom
+    - env: REACT=16 TEST_TYPE=tdf:node
+    - env: REACT=15 TEST_TYPE=tdf:dist
+    - env: REACT=15 TEST_TYPE=tdf:lib
+    - env: REACT=15 TEST_TYPE=tdf:es
+    - env: REACT=15 TEST_TYPE=tdf:dom
+    - env: REACT=15 TEST_TYPE=tdf:node
 
 before_script:
   - scripts/install-react.sh

@@ -21,8 +21,8 @@ title: Tag
 | afterClose | 关闭动画完成后的回调，请使用 `onClose`, 我们将在下个版本删除此项 | () => void | - |
 | closable | 标签是否可以关闭 | boolean | false |
 | color | 标签色 | string | - |
-| onClose | 关闭时的回调 | (e) => void | - |
 | visible | 是否显示标签 | boolean | `true` |
+| onClose | 关闭时的回调 | (e) => void | - |
 
 ### Tag.CheckableTag
 

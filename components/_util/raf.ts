@@ -35,4 +35,4 @@ wrapperRaf.cancel = function(pid?: number) {
   delete ids[pid];
 };
 
-wrapperRaf.ids = ids; // export this for test usage
+wrapperRaf.ids = ids; // export this for tdf usage

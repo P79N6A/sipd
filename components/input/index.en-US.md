@@ -19,6 +19,7 @@ A basic widget for getting the user input is a text field. Keyboard and mouse ca
 | --- | --- | --- | --- |
 | addonAfter | The label text displayed after (on the right side of) the input field. | string\|ReactNode |  |
 | addonBefore | The label text displayed before (on the left side of) the input field. | string\|ReactNode |  |
+| allowClear | allow to remove input content with clear icon | boolean |  |
 | defaultValue | The initial input content | string |  |
 | disabled | Whether the input is disabled. | boolean | false |
 | id | The ID for input | string |  |
@@ -29,7 +30,6 @@ A basic widget for getting the user input is a text field. Keyboard and mouse ca
 | value | The input content value | string |  |
 | onChange | callback when user input | function(e) |  |
 | onPressEnter | The callback function that is triggered when Enter key is pressed. | function(e) |  |
-| allowClear | allow to remove input content with clear icon | boolean |  |
 
 > When `Input` is used in a `Form.Item` context, if the `Form.Item` has the `id` and `options` props defined then `value`, `defaultValue`, and `id` props of `Input` are automatically set.
 

@@ -87,7 +87,7 @@ const columns = [
 | showHeader | 是否显示表头 | boolean | true |
 | size | 表格大小 | default \| middle \| small | default |
 | title | 表格标题 | Function(currentPageData) |  |
-| onChange | 分页、排序、筛选变化时触发 | Function(pagination, filters, sorter, extra: { currentDataSource: [] }) |  |
+| onChange | 分页、排序、筛选变化时触发 | Function(pagination, filters, sorter, extra: { currentDataSource: \[] }) |  |
 | onExpand | 点击展开图标时触发 | Function(expanded, record) |  |
 | onExpandedRowsChange | 展开的行变化时触发 | Function(expandedRows) |  |
 | onHeaderRow | 设置头部行属性 | Function(column, index) | - |
@@ -137,9 +137,9 @@ const columns = [
 | fixed | 列是否固定，可选 `true`(等效于 left) `'left'` `'right'` | boolean\|string | false |
 | key | React 需要的 key，如果已经设置了唯一的 `dataIndex`，可以忽略这个属性 | string | - |
 | render | 生成复杂数据的渲染函数，参数分别为当前行的值，当前行数据，行索引，@return 里面可以设置表格[行/列合并](#components-table-demo-colspan-rowspan) | Function(text, record, index) {} | - |
+| sortDirections | 支持的排序方式，取值为 `'ascend'` `'descend'` | Array | `['ascend', 'descend']` |
 | sorter | 排序函数，本地排序使用一个函数(参考 [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 的 compareFunction)，需要服务端排序可设为 true | Function\|boolean | - |
 | sortOrder | 排序的受控属性，外界可用此控制列的排序，可设置为 `'ascend'` `'descend'` `false` | boolean\|string | - |
-| sortDirections | 支持的排序方式，取值为 `'ascend'` `'descend'` | Array | `['ascend', 'descend']` |
 | title | 列头显示文字 | ReactNode\|({ sortOrder, filters }) => ReactNode | - |
 | width | 列宽度（[指定了也不生效？](https://github.com/ant-design/ant-design/issues/13825#issuecomment-449889241)） | string\|number | - |
 | onCell | 设置单元格属性 | Function(record, rowIndex) | - |
@@ -169,8 +169,8 @@ const columns = [
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| columnWidth | 自定义列表选择框宽度 | string\|number | `60px` |
 | columnTitle | 自定义列表选择框标题 | string\|React.ReactNode | - |
+| columnWidth | 自定义列表选择框宽度 | string\|number | `60px` |
 | fixed | 把选择框列固定在左边 | boolean | - |
 | getCheckboxProps | 选择框的默认属性配置 | Function(record) | - |
 | hideDefaultSelections | 去掉『全选』『反选』两个默认选项 | boolean | false |
@@ -228,7 +228,6 @@ class NameColumn extends Table.Column<IUser> {}
 <Table<IUser> dataSource={data}>
   <Table.Column<IUser> key="name" title="Name" dataIndex="name" />
 </Table>
-
 ```
 
 ## 注意

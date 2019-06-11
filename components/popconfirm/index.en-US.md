@@ -17,12 +17,12 @@ The difference with the `confirm` modal dialog is that it's more lightweight tha
 | Param | Description | Type | Default value |
 | --- | --- | --- | --- |
 | cancelText | text of the Cancel button | string | `Cancel` |
+| icon | customize icon of confirmation | ReactNode | &lt;Icon type="exclamation-circle" /> |
 | okText | text of the Confirm button | string | `Confirm` |
 | okType | Button `type` of the Confirm button | string | `primary` |
 | title | title of the confirmation box | string\|ReactNode | - |
 | onCancel | callback of cancel | function(e) | - |
 | onConfirm | callback of confirmation | function(e) | - |
-| icon | customize icon of confirmation | ReactNode | &lt;Icon type="exclamation-circle" /&gt; |
 
 Consult [Tooltip's documentation](https://ant.design/components/tooltip/#API) to find more APIs.
 

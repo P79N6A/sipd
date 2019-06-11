@@ -36,14 +36,14 @@ A form consists of one or more form fields whose type includes input, textarea, 
 
 | Property | Description | Type | Default Value |
 | --- | --- | --- | --- |
+| colon | change default props colon value of Form.Item | boolean | true |
 | form | Decorated by `Form.create()` will be automatically set `this.props.form` property | object | n/a |
 | hideRequiredMark | Hide required mark of all form items | Boolean | false |
 | labelAlign | Label text align | 'left' \| 'right' | 'right' |
 | labelCol | (Added in 3.14.0. Previous version can only set on FormItem.) The layout of label. You can set `span` `offset` to something like `{span: 3, offset: 12}` or `sm: {span: 3, offset: 12}` same as with `<Col>` | [object](https://ant.design/components/grid/#Col) |  |
 | layout | Define form layout | 'horizontal'\|'vertical'\|'inline' | 'horizontal' |
-| onSubmit | Defines a function will be called if form data validation is successful. | Function(e:Event) |  |
 | wrapperCol | (Added in 3.14.0. Previous version can only set on FormItem.) The layout for input controls, same as `labelCol` | [object](https://ant.design/components/grid/#Col) |  |
-| colon | change default props colon value of Form.Item | boolean | true |
+| onSubmit | Defines a function will be called if form data validation is successful. | Function(e:Event) |  |
 
 ### Form.create(options)
 
@@ -59,7 +59,7 @@ The following `options` are available:
 
 | Property | Description | Type |
 | --- | --- | --- |
-| mapPropsToFields | Convert props to field value(e.g. reading the values from Redux store). And you must mark returned fields with [`Form.createFormField`](#Form.createFormField). Please note that the form fields will become controlled components. Properties like errors will not be automatically mapped and need to be manually passed in. | (props) => ({ \[fieldName\]: FormField { value } }) |
+| mapPropsToFields | Convert props to field value(e.g. reading the values from Redux store). And you must mark returned fields with [`Form.createFormField`](#Form.createFormField). Please note that the form fields will become controlled components. Properties like errors will not be automatically mapped and need to be manually passed in. | (props) => ({ \[fieldName]: FormField { value } }) |
 | name | Set the id prefix of fields under form | - |
 | validateMessages | Default validate message. And its format is similar with [newMessages](https://github.com/yiminghe/async-validator/blob/master/src/messages.js)'s returned value | Object { \[nested.path]: String } |
 | onFieldsChange | Specify a function that will be called when the fields (including errors) of a `Form.Item` gets changed. Usage example: saving the field's value to Redux store. | Function(props, changedFields, allFields) |
@@ -91,9 +91,9 @@ If the form has been decorated by `Form.create` then it has `this.props.form` pr
 | isFieldTouched | Check whether a field is touched by `getFieldDecorator`'s `options.trigger` event | (name: string) => boolean |
 | isFieldValidating | Check if the specified field is being validated. | Function(name) |
 | resetFields | Reset the specified fields' value(to `initialValue`) and status. If you don't specify a parameter, all the fields will be reset. | Function(\[names: string\[]]) |
-| setFields | Set value and error state of fields. [Code Sample](https://github.com/react-component/form/blob/3b9959b57ab30b41d8890ff30c79a7e7c383cad3/examples/server-validate.js#L74-L79) | ({<br />&nbsp;&nbsp;\[fieldName\]: {value: any, errors: \[Error\] }<br />}) => void |
-| setFieldsValue | Set the value of a field. (Note: please don't use it in `componentWillReceiveProps`, otherwise, it will cause an endless loop, [reason](https://github.com/ant-design/ant-design/issues/2985)) | ({ \[fieldName\]&#x3A; value }) => void |
-| validateFields | Validate the specified fields and get theirs values and errors. If you don't specify the parameter of fieldNames, you will validate all fields. | (<br />&nbsp;&nbsp;\[fieldNames: string\[]],<br />&nbsp;&nbsp;\[options: object\],<br />&nbsp;&nbsp;callback(errors, values)<br />) => void |
+| setFields | Set value and error state of fields. [Code Sample](https://github.com/react-component/form/blob/3b9959b57ab30b41d8890ff30c79a7e7c383cad3/examples/server-validate.js#L74-L79) | ({<br />  \[fieldName]: {value: any, errors: \[Error] }<br />}) => void |
+| setFieldsValue | Set the value of a field. (Note: please don't use it in `componentWillReceiveProps`, otherwise, it will cause an endless loop, [reason](https://github.com/ant-design/ant-design/issues/2985)) | ({ \[fieldName]: value }) => void |
+| validateFields | Validate the specified fields and get theirs values and errors. If you don't specify the parameter of fieldNames, you will validate all fields. | (<br />  \[fieldNames: string\[]],<br />  \[options: object],<br />  callback(errors, values)<br />) => void |
 | validateFieldsAndScroll | This function is similar to `validateFields`, but after validation, if the target field is not in visible area of form, form will be automatically scrolled to the target field area. | same as `validateFields` |
 
 ### validateFields/validateFieldsAndScroll

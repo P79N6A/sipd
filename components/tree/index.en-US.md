@@ -33,8 +33,8 @@ Almost anything can be represented in a tree structure. Examples include directo
 | multiple | Allows selecting multiple treeNodes | boolean | false |
 | selectedKeys | (Controlled) Specifies the keys of the selected treeNodes | string\[] | - |
 | showIcon | Shows the icon before a TreeNode's title. There is no default style; you must set a custom style for it if set to `true` | boolean | false |
-| switcherIcon | customize collapse/expand icon of tree node | React.ReactElement | - |
 | showLine | Shows a connecting line | boolean | false |
+| switcherIcon | customize collapse/expand icon of tree node | React.ReactElement | - |
 | onCheck | Callback function for when the onCheck event occurs | function(checkedKeys, e:{checked: bool, checkedNodes, node, event}) | - |
 | onDragEnd | Callback function for when the onDragEnd event occurs | function({event, node}) | - |
 | onDragEnter | Callback function for when the onDragEnter event occurs | function({event, node, expandedKeys}) | - |
@@ -88,4 +88,4 @@ Before `3.4.0`: The number of treeNodes can be very large, but when `checkable=t
 
 ### How to hide file icon when use showLine?
 
-File icon realize by using switcherIcon. You can overwrite the style to hide it: https://codesandbox.io/s/883vo47xp8
+File icon realize by using switcherIcon. You can overwrite the style to hide it: <https://codesandbox.io/s/883vo47xp8>

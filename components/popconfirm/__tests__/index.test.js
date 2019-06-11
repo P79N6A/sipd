@@ -27,7 +27,7 @@ describe('Popconfirm', () => {
     const triggerNode = wrapper.find('span').at(0);
     triggerNode.simulate('click');
     expect(onVisibleChange).toHaveBeenLastCalledWith(true, undefined);
-    expect(wrapper.find('.popconfirm-test').length).toBe(1);
+    expect(wrapper.find('.popconfirm-tdf').length).toBe(1);
 
     triggerNode.simulate('click');
     expect(onVisibleChange).toHaveBeenLastCalledWith(false, undefined);

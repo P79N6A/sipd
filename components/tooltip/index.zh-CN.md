@@ -25,6 +25,7 @@ title: Tooltip
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
+| align | 该值将合并到 placement 的配置中，设置参考 [rc-tooltip](https://github.com/react-component/tooltip) | Object | 无 |
 | arrowPointAtCenter | 箭头是否指向目标元素中心，`antd@1.11+` 支持 | boolean | `false` |
 | autoAdjustOverflow | 气泡被遮挡时自动调整位置 | boolean | `true` |
 | defaultVisible | 默认是否显隐 | boolean | false |
@@ -37,7 +38,6 @@ title: Tooltip
 | trigger | 触发行为，可选 `hover/focus/click/contextMenu` | string | hover |
 | visible | 用于手动控制浮层显隐 | boolean | false |
 | onVisibleChange | 显示隐藏的回调 | (visible) => void | 无 |
-| align | 该值将合并到 placement 的配置中，设置参考 [rc-tooltip](https://github.com/react-component/tooltip) | Object | 无 |
 
 ## 注意
 

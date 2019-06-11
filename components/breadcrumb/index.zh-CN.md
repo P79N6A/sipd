@@ -29,8 +29,8 @@ title: Breadcrumb
 | 参数      | 参数           | 类型                                   | 默认值 |
 | --------- | -------------- | -------------------------------------- | ------ |
 | href      | 链接的目的地   | string                                 | -      |
-| separator | 自定义的分隔符 | string\|ReactNode                      | '/'    |
 | overlay   | 下来菜单的内容 | [Menu](/components/menu) \| () => Menu | -      |
+| separator | 自定义的分隔符 | string\|ReactNode                      | '/'    |
 | onClick   | 单击事件       | (e:MouseEvent)=>void                   | -      |
 
 ### routes

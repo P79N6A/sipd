@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Form, { FormComponentProps, FormCreateOption } from '../Form';
 
-// test Form.create on component without own props
+// tdf Form.create on component without own props
 class WithoutOwnProps extends React.Component<any, any> {
   state = {
     foo: 'bar',
@@ -16,7 +16,7 @@ const WithoutOwnPropsForm = Form.create()(WithoutOwnProps);
 
 <WithoutOwnPropsForm />;
 
-// test Form.create on component with own props
+// tdf Form.create on component with own props
 interface WithOwnPropsProps extends FormComponentProps {
   name: string;
 }
@@ -35,7 +35,7 @@ const WithOwnPropsForm = Form.create<WithOwnPropsProps>()(WithOwnProps);
 
 <WithOwnPropsForm name="foo" />;
 
-// test Form.create with options
+// tdf Form.create with options
 interface WithCreateOptionsProps extends FormComponentProps {
   username: string;
 }

@@ -82,7 +82,7 @@ const columns = [
 | showHeader | Whether to show table header | boolean | `true` |
 | size | Size of table | `default` \| `middle` \| `small` | `default` |
 | title | Table title renderer | Function(currentPageData) |  |
-| onChange | Callback executed when pagination, filters or sorter is changed | Function(pagination, filters, sorter, extra: { currentDataSource: [] }) |  |
+| onChange | Callback executed when pagination, filters or sorter is changed | Function(pagination, filters, sorter, extra: { currentDataSource: \[] }) |  |
 | onExpand | Callback executed when the row expand icon is clicked | Function(expanded, record) |  |
 | onExpandedRowsChange | Callback executed when the expanded rows change | Function(expandedRows) |  |
 | onHeaderRow | Set props on per header row | Function(column, index) | - |
@@ -132,9 +132,9 @@ One of the Table `columns` prop for describing the table's columns, Column has t
 | fixed | Set column to be fixed: `true`(same as left) `'left'` `'right'` | boolean\|string | `false` |
 | key | Unique key of this column, you can ignore this prop if you've set a unique `dataIndex` | string | - |
 | render | Renderer of the table cell. The return value should be a ReactNode, or an object for [colSpan/rowSpan config](#components-table-demo-colspan-rowspan) | Function(text, record, index) {} | - |
+| sortDirections | supported sort way, could be `'ascend'`, `'descend'` | Array | `['ascend', 'descend']` |
 | sorter | Sort function for local sort, see [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)'s compareFunction. If you need sort buttons only, set to `true` | Function\|boolean | - |
 | sortOrder | Order of sorted values: `'ascend'` `'descend'` `false` | boolean\|string | - |
-| sortDirections | supported sort way, could be `'ascend'`, `'descend'` | Array | `['ascend', 'descend']` |
 | title | Title of this column | ReactNode\|({ sortOrder, filters }) => ReactNode | - |
 | width | Width of this column ([width not working?](https://github.com/ant-design/ant-design/issues/13825#issuecomment-449889241)) | string\|number | - |
 | onCell | Set props on per cell | Function(record, rowIndex) | - |
@@ -164,8 +164,8 @@ Properties for row selection.
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
-| columnWidth | Set the width of the selection column | string\|number | `60px` |
 | columnTitle | Set the title of the selection column | string\|React.ReactNode | - |
+| columnWidth | Set the width of the selection column | string\|number | `60px` |
 | fixed | Fixed selection column on the left | boolean | - |
 | getCheckboxProps | Get Checkbox or Radio props | Function(record) | - |
 | hideDefaultSelections | Remove the default `Select All` and `Select Invert` selections | boolean | `false` |

@@ -29,6 +29,7 @@ Radio group can wrap a group of `Radio`。
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
+| buttonStyle | style type of radio button | `outline` \| `solid` | `outline` |
 | defaultValue | Default selected value | any | - |
 | disabled | Disable all radio buttons | boolean | false |
 | name | The `name` property of all `input[type="radio"]` children | string | - |
@@ -36,7 +37,6 @@ Radio group can wrap a group of `Radio`。
 | size | size for radio button style | `large` \| `default` \| `small` | `default` |
 | value | Used for setting the currently selected value. | any | - |
 | onChange | The callback function that is triggered when the state changes. | Function(e:Event) | - |
-| buttonStyle | style type of radio button | `outline` \| `solid` | `outline` |
 
 ## Methods
 

@@ -7,8 +7,8 @@ const testDist = process.env.LIB_DIR === 'dist';
 
 /**
  * rc component will generate id for aria usage.
- * It's created as `test-uuid` when env === 'test'.
- * Or `f7fa7a3c-a675-47bc-912e-0c45fb6a74d9`(randomly) when not test env.
+ * It's created as `tdf-uuid` when env === 'tdf'.
+ * Or `f7fa7a3c-a675-47bc-912e-0c45fb6a74d9`(randomly) when not tdf env.
  * So we need hack of this to modify the `aria-controls`.
  */
 function ariaConvert(wrapper) {

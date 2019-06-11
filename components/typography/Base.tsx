@@ -254,7 +254,7 @@ class Base extends React.Component<InternalBlockProps & ConfigConsumerProps, Bas
   resizeOnNextFrame = () => {
     raf.cancel(this.rafId);
     this.rafId = raf(() => {
-      // Do not bind `syncEllipsis`. It need for test usage on prototype
+      // Do not bind `syncEllipsis`. It need for tdf usage on prototype
       this.syncEllipsis();
     });
   };

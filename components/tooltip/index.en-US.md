@@ -23,6 +23,7 @@ The following APIs are shared by Tooltip, Popconfirm, Popover.
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
+| align | this value will be merged into placement's config, please refer to the settings [rc-tooltip](https://github.com/react-component/tooltip) | Object | - |
 | arrowPointAtCenter | Whether the arrow is pointed at the center of target, supported after `antd@1.11+` | boolean | `false` |
 | autoAdjustOverflow | Whether to adjust popup placement automatically when popup is off screen | boolean | `true` |
 | defaultVisible | Whether the floating tooltip card is visible by default | boolean | `false` |
@@ -35,7 +36,6 @@ The following APIs are shared by Tooltip, Popconfirm, Popover.
 | trigger | Tooltip trigger mode | `hover` \| `focus` \| `click` \| `contextMenu` | `hover` |
 | visible | Whether the floating tooltip card is visible or not | boolean | `false` |
 | onVisibleChange | Callback executed when visibility of the tooltip card is changed | (visible) => void | - |
-| align | this value will be merged into placement's config, please refer to the settings [rc-tooltip](https://github.com/react-component/tooltip) | Object | - |
 
 ## Note
 

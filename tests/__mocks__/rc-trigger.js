@@ -6,7 +6,7 @@ let Trigger; // eslint-disable-line
 
 if (process.env.REACT === '15') {
   const ActualTrigger = require.requireActual('rc-trigger');
-  // cannot use object destruction, cause react 15 test cases fail
+  // cannot use object destruction, cause react 15 tdf cases fail
   const render = ActualTrigger.prototype.render; // eslint-disable-line
 
   ActualTrigger.prototype.render = function triggerRender() {

@@ -106,6 +106,7 @@ export default class Demo extends React.Component {
     const { props } = this;
     const { meta, src, content, preview, highlightedCode, style, highlightedStyle, expand } = props;
     const { copied } = state;
+    console.log(props);
     if (!this.liveDemo) {
       this.liveDemo = meta.iframe ? (
         <BrowserFrame>
@@ -200,11 +201,11 @@ export default class Demo extends React.Component {
         },
         'index.js': {
           content: `
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
-import './index.css';
-${sourceCode.replace('mountNode', "document.getElementById('container')")}
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+            import 'antd/dist/antd.css';
+            import './index.css';
+            ${sourceCode.replace('mountNode', "document.getElementById('container')")}
           `,
         },
         'index.html': {

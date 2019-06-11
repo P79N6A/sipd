@@ -36,6 +36,7 @@ More layouts with navigation: [layout](/components/layout).
 | mode | type of the menu; `vertical`, `horizontal`, and `inline` modes are supported | string: `vertical` \| `horizontal` \| `inline` | `vertical` |
 | multiple | Allow selection of multiple items | boolean | false |
 | openKeys | array with the keys of currently opened sub menus | string\[] |  |
+| overflowedIndicator | Customized icon when menu collapsed | ReactNode | - |
 | selectable | allow selecting menu items | boolean | true |
 | selectedKeys | array with the keys of currently selected menu items | string\[] |  |
 | style | style of the root node | object |  |
@@ -46,7 +47,6 @@ More layouts with navigation: [layout](/components/layout).
 | onDeselect | callback executed when a menu item is deselected, only supported for multiple mode | function({ item, key, keyPath, selectedKeys, domEvent }) | - |
 | onOpenChange | called when open/close sub menu | function(openKeys: string\[]) | noop |
 | onSelect | callback executed when a menu item is selected | function({ item, key, keyPath, selectedKeys, domEvent }) | none |
-| overflowedIndicator | Customized icon when menu collapsed | ReactNode | - |
 
 > More options in [rc-menu](https://github.com/react-component/menu#api)
 

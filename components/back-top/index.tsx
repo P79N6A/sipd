@@ -30,7 +30,7 @@ export interface BackTopProps {
   prefixCls?: string;
   className?: string;
   style?: React.CSSProperties;
-  visible?: boolean; // Only for test. Don't use it.
+  visible?: boolean; // Only for tdf. Don't use it.
 }
 
 export default class BackTop extends React.Component<BackTopProps, any> {

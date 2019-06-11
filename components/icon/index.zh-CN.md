@@ -23,13 +23,13 @@ ReactDOM.render(<IconDisplay />, mountNode);
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| type | 图标类型。遵循图标的命名规范 | string | - |
+| component | 控制如何渲染图标，通常是一个渲染根标签为 `<svg>` 的 `React` 组件，**会使 `type` 属性失效** | ComponentType&lt;CustomIconComponentProps> | - |
+| rotate | 图标旋转角度（3.13.0 后新增，IE9 无效） | number | - |
+| spin | 是否有旋转动画 | boolean | false |
 | style | 设置图标的样式，例如 `fontSize` 和 `color` | CSSProperties | - |
 | theme | 图标主题风格。可选实心、描线、双色等主题风格，适用于官方图标 | 'filled' \| 'outlined' \| 'twoTone' | 'outlined' |
-| spin | 是否有旋转动画 | boolean | false |
-| rotate | 图标旋转角度（3.13.0 后新增，IE9 无效） | number | - |
-| component | 控制如何渲染图标，通常是一个渲染根标签为 `<svg>` 的 `React` 组件，**会使 `type` 属性失效** | ComponentType<CustomIconComponentProps\> | - |
 | twoToneColor | 仅适用双色图标。设置双色图标的主要颜色 | string (十六进制颜色) | - |
+| type | 图标类型。遵循图标的命名规范 | string | - |
 
 ### SVG 图标
 
@@ -85,8 +85,8 @@ ReactDOM.render(<MyIcon type="icon-example" />, mountedNode);
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| scriptUrl | [iconfont.cn](http://iconfont.cn/) 项目在线生成的 `js` 地址 | string | - |
 | extraCommonProps | 给所有的 `svg` 图标 `<Icon />` 组件设置额外的属性 | `{ [key: string]: any }` | {} |
+| scriptUrl | [iconfont.cn](http://iconfont.cn/) 项目在线生成的 `js` 地址 | string | - |
 
 在 `scriptUrl` 都设置有效的情况下，组件在渲染前会自动引入 [iconfont.cn](http://iconfont.cn/) 项目中的图标符号集，无需手动引入。
 
@@ -126,8 +126,8 @@ ReactDOM.render(<Icon component={MessageSvg} />, mountNode);
 
 | 字段      | 说明                    | 类型             | 只读值         |
 | --------- | ----------------------- | ---------------- | -------------- |
-| width     | `svg` 元素宽度          | string \| number | '1em'          |
-| height    | `svg` 元素高度          | string \| number | '1em'          |
-| fill      | `svg` 元素填充的颜色    | string           | 'currentColor' |
 | className | 计算后的 `svg` 类名     | string           | -              |
+| fill      | `svg` 元素填充的颜色    | string           | 'currentColor' |
+| height    | `svg` 元素高度          | string \| number | '1em'          |
 | style     | 计算后的 `svg` 元素样式 | CSSProperties    | -              |
+| width     | `svg` 元素宽度          | string \| number | '1em'          |

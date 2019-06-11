@@ -20,34 +20,34 @@ jobs:
           TEST_TYPE: lint
         dist-react@16:
           REACT: 16
-          TEST_TYPE: test:dist
+          TEST_TYPE: tdf:dist
         lib-react@16:
           REACT: 16
-          TEST_TYPE: test:lib
+          TEST_TYPE: tdf:lib
         es-react@16:
           REACT: 16
-          TEST_TYPE: test:es
+          TEST_TYPE: tdf:es
         dom-react@16:
           REACT: 16
-          TEST_TYPE: test:dom
+          TEST_TYPE: tdf:dom
         node-react@16:
           REACT: 16
-          TEST_TYPE: test:node
+          TEST_TYPE: tdf:node
         dist-react@15:
           REACT: 15
-          TEST_TYPE: test:dist
+          TEST_TYPE: tdf:dist
         lib-react@15:
           REACT: 15
-          TEST_TYPE: test:lib
+          TEST_TYPE: tdf:lib
         es-react@15:
           REACT: 15
-          TEST_TYPE: test:es
+          TEST_TYPE: tdf:es
         dom-react@15:
           REACT: 15
-          TEST_TYPE: test:dom
+          TEST_TYPE: tdf:dom
         node-react@15:
           REACT: 15
-          TEST_TYPE: test:node
+          TEST_TYPE: tdf:node
     steps:
       - checkout: self
         fetchDepth: 1
@@ -60,7 +60,7 @@ jobs:
       - script: scripts/install-react.sh
         displayName: install-react
       - script: scripts/travis-script.sh
-        displayName: test
+        displayName: tdf
       - task: PublishBuildArtifacts@1
         # 主分支，并且运行成功
         condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))

@@ -8,7 +8,7 @@ module.exports = {
     '\\.md$': './node_modules/antd-tools/lib/jest/demoPreprocessor',
     '\\.(jpg|png|gif|svg)$': './node_modules/antd-tools/lib/jest/imagePreprocessor',
   },
-  testRegex: 'demo\\.test\\.js$',
+  testRegex: 'demo\\.tdf\\.js$',
   testEnvironment: 'node',
   snapshotSerializers: ['enzyme-to-json/serializer'],
   globals: {

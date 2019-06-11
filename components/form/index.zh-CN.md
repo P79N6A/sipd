@@ -39,14 +39,14 @@ title: Form
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
+| colon | 配置 Form.Item 的 colon 的默认值 | boolean | true |
 | form | 经 `Form.create()` 包装过的组件会自带 `this.props.form` 属性 | object | - |
 | hideRequiredMark | 隐藏所有表单项的必选标记 | Boolean | false |
 | labelAlign | label 标签的文本对齐方式 | 'left' \| 'right' | 'right' |
 | labelCol | （3.14.0 新增，之前的版本只能设置到 FormItem 上。）label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}` | [object](https://ant.design/components/grid/#Col) |  |
 | layout | 表单布局 | 'horizontal'\|'vertical'\|'inline' | 'horizontal' |
-| onSubmit | 数据验证成功后回调事件 | Function(e:Event) |  |
 | wrapperCol | （3.14.0 新增，之前的版本只能设置到 FormItem 上。）需要为输入控件设置布局样式时，使用该属性，用法同 labelCol | [object](https://ant.design/components/grid/#Col) |  |
-| colon | 配置 Form.Item 的 colon 的默认值 | boolean | true |
+| onSubmit | 数据验证成功后回调事件 | Function(e:Event) |  |
 
 ### Form.create(options)
 
@@ -62,7 +62,7 @@ CustomizedForm = Form.create({})(CustomizedForm);
 
 | 参数 | 说明 | 类型 |
 | --- | --- | --- |
-| mapPropsToFields | 把父组件的属性映射到表单项上（如：把 Redux store 中的值读出），需要对返回值中的表单域数据用 [`Form.createFormField`](#Form.createFormField) 标记，注意表单项将变成受控组件, error 等也需要一并手动传入 | (props) => ({ \[fieldName\]: FormField { value } }) |
+| mapPropsToFields | 把父组件的属性映射到表单项上（如：把 Redux store 中的值读出），需要对返回值中的表单域数据用 [`Form.createFormField`](#Form.createFormField) 标记，注意表单项将变成受控组件, error 等也需要一并手动传入 | (props) => ({ \[fieldName]: FormField { value } }) |
 | name | 设置表单域内字段 id 的前缀 | - |
 | validateMessages | 默认校验信息，可用于把默认错误信息改为中文等，格式与 [newMessages](https://github.com/yiminghe/async-validator/blob/master/src/messages.js) 返回值一致 | Object { \[nested.path]: String } |
 | onFieldsChange | 当 `Form.Item` 子节点的值（包括 error）发生改变时触发，可以把对应的值转存到 Redux store | Function(props, changedFields, allFields) |
@@ -94,9 +94,9 @@ this.form // => The instance of CustomizedForm
 | isFieldTouched | 判断一个输入控件是否经历过 `getFieldDecorator` 的值收集时机 `options.trigger` | (name: string) => boolean |
 | isFieldValidating | 判断一个输入控件是否在校验状态 | Function(name) |
 | resetFields | 重置一组输入控件的值（为 `initialValue`）与状态，如不传入参数，则重置所有组件 | Function(\[names: string\[]]) |
-| setFields | 设置一组输入控件的值与错误状态：[代码](https://github.com/react-component/form/blob/3b9959b57ab30b41d8890ff30c79a7e7c383cad3/examples/server-validate.js#L74-L79) | ({<br />&nbsp;&nbsp;\[fieldName\]: {value: any, errors: \[Error\] }<br />}) => void |
-| setFieldsValue | 设置一组输入控件的值（注意：不要在 `componentWillReceiveProps` 内使用，否则会导致死循环，[原因](https://github.com/ant-design/ant-design/issues/2985)） | ({ \[fieldName\]&#x3A; value }) => void |
-| validateFields | 校验并获取一组输入域的值与 Error，若 fieldNames 参数为空，则校验全部组件 | (<br />&nbsp;&nbsp;\[fieldNames: string\[]],<br />&nbsp;&nbsp;\[options: object\],<br />&nbsp;&nbsp;callback(errors, values)<br />) => void |
+| setFields | 设置一组输入控件的值与错误状态：[代码](https://github.com/react-component/form/blob/3b9959b57ab30b41d8890ff30c79a7e7c383cad3/examples/server-validate.js#L74-L79) | ({<br />  \[fieldName]: {value: any, errors: \[Error] }<br />}) => void |
+| setFieldsValue | 设置一组输入控件的值（注意：不要在 `componentWillReceiveProps` 内使用，否则会导致死循环，[原因](https://github.com/ant-design/ant-design/issues/2985)） | ({ \[fieldName]: value }) => void |
+| validateFields | 校验并获取一组输入域的值与 Error，若 fieldNames 参数为空，则校验全部组件 | (<br />  \[fieldNames: string\[]],<br />  \[options: object],<br />  callback(errors, values)<br />) => void |
 | validateFieldsAndScroll | 与 `validateFields` 相似，但校验完后，如果校验不通过的菜单域不在可见范围内，则自动滚动进可见范围 | 参考 `validateFields` |
 
 ### validateFields/validateFieldsAndScroll

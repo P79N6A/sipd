@@ -28,7 +28,7 @@ One or more elements can be selected from either column, one click on the proper
 | lazy | property of [react-lazy-load](https://github.com/loktar00/react-lazy-load) for lazy rendering items. Turn off it by set to `false`. | object\|boolean | `{ height: 32, offset: 32 }` |  |
 | listStyle | A custom CSS style used for rendering the transfer columns. | object |  |  |
 | locale | i18n text including filter, empty text, item unit, etc | object | `{ itemUnit: 'item', itemsUnit: 'items', notFoundContent: 'The list is empty', searchPlaceholder: 'Search here' }` |  |
-| operations | A set of operations that are sorted from top to bottom. | string\[] | \['>', '<'] |  |
+| operations | A set of operations that are sorted from top to bottom. | string\[] | \['>', '&lt;'] |  |
 | operationStyle | A custom CSS style used for rendering the operations column. | object |  |  |
 | render | The function to generate the item shown on a column. Based on an record (element of the dataSource array), this function should return a React element which is generated from that record. Also, it can return a plain object with `value` and `label`, `label` is a React element and `value` is for title | Function(record) |  |  |
 | selectedKeys | A set of keys of selected items. | string\[] | \[] |  |
@@ -46,14 +46,14 @@ One or more elements can be selected from either column, one click on the proper
 
 New in 3.18.0. Transfer accept `children` to customize render list, using follow props:
 
-| Property        | Description             | Type                                | Version |
-| --------------- | ----------------------- | ----------------------------------- | ------- |
-| direction       | List render direction   | 'left' \| 'right'                   | 3.18.0  |
-| disabled        | Disable list or not     | boolean                             | 3.18.0  |
-| filteredItems   | Filtered items          | TransferItem[]                      | 3.18.0  |
-| onItemSelect    | Select item             | (key: string, selected: boolean)    | 3.18.0  |
-| onItemSelectAll | Select a group of items | (keys: string[], selected: boolean) | 3.18.0  |
-| selectedKeys    | Selected items          | string[]                            | 3.18.0  |
+| Property        | Description             | Type                                 | Version |
+| --------------- | ----------------------- | ------------------------------------ | ------- |
+| direction       | List render direction   | 'left' \| 'right'                    | 3.18.0  |
+| disabled        | Disable list or not     | boolean                              | 3.18.0  |
+| filteredItems   | Filtered items          | TransferItem\[]                      | 3.18.0  |
+| selectedKeys    | Selected items          | string\[]                            | 3.18.0  |
+| onItemSelect    | Select item             | (key: string, selected: boolean)     | 3.18.0  |
+| onItemSelectAll | Select a group of items | (keys: string\[], selected: boolean) | 3.18.0  |
 
 #### example
 

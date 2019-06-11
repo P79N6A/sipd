@@ -185,7 +185,7 @@ class Descriptions extends React.Component<
     if (typeof column === 'number') {
       return column as number;
     }
-    // If it is an object, but no response is found, this happens only in the test.
+    // If it is an object, but no response is found, this happens only in the tdf.
     // Maybe there are some strange environments
     return 3;
   }

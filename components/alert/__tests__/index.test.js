@@ -33,7 +33,7 @@ describe('Alert', () => {
     it('sets data attributes on input', () => {
       const wrapper = mount(<Alert data-test="test-id" data-id="12345" />);
       const input = wrapper.find('.ant-alert').getDOMNode();
-      expect(input.getAttribute('data-test')).toBe('test-id');
+      expect(input.getAttribute('data-test')).toBe('tdf-id');
       expect(input.getAttribute('data-id')).toBe('12345');
     });
 

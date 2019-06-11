@@ -6,7 +6,7 @@ import { ConfigConsumer, ConfigConsumerProps, CSPConfig } from '../config-provid
 
 let styleForPesudo: HTMLStyleElement | null;
 
-// Where el is the DOM element you'd like to test for visibility
+// Where el is the DOM element you'd like to tdf for visibility
 function isHidden(element: HTMLElement) {
   if (process.env.NODE_ENV === 'test') {
     return false;

@@ -67,7 +67,7 @@ export interface MenuState {
   openKeys: string[];
 
   // This may be not best way since origin code use `this.switchingModeFromInline` to handle collapse management.
-  // But for current test, seems it's OK just use state.
+  // But for current tdf, seems it's OK just use state.
   switchingModeFromInline: boolean;
   inlineOpenKeys: string[];
   prevProps: InternalMenuProps;

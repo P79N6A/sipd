@@ -28,6 +28,7 @@ import moment from 'moment';
 | allowClear | 是否展示清除按钮 | boolean | true |
 | autoFocus | 自动获取焦点 | boolean | false |
 | className | 选择器类名 | string | '' |
+| clearIcon | 自定义的清除图标 | ReactNode | - |
 | clearText | 清除按钮的提示文案 | string | clear |
 | defaultOpenValue | 当 defaultValue/value 不存在时，可以设置面板打开时默认选中的值 | [moment](http://momentjs.com/) | moment() |
 | defaultValue | 默认时间 | [moment](http://momentjs.com/) | 无 |
@@ -47,7 +48,6 @@ import moment from 'moment';
 | popupStyle | 弹出层样式对象 | object | - |
 | secondStep | 秒选项间隔 | number | 1 |
 | suffixIcon | 自定义的选择框后缀图标 | ReactNode | - |
-| clearIcon | 自定义的清除图标 | ReactNode | - |
 | use12Hours | 使用 12 小时制，为 true 时 `format` 默认为 `h:mm:ss a` | boolean | false |
 | value | 当前时间 | [moment](http://momentjs.com/) | 无 |
 | onChange | 时间发生变化的回调 | function(time: moment, timeString: string): void | 无 |

@@ -61,8 +61,8 @@ The following APIs are shared by DatePicker, MonthPicker, RangePicker, WeekPicke
 | placeholder | placeholder of date input | string\|RangePicker\[] | - |
 | popupStyle | to customize the style of the popup calendar | object | {} |
 | size | determine the size of the input box, the height of `large` and `small`, are 40px and 24px respectively, while default size is 32px | string | - |
-| suffixIcon | The custom suffix icon | ReactNode | - |
 | style | to customize the style of the input box | object | {} |
+| suffixIcon | The custom suffix icon | ReactNode | - |
 | onOpenChange | a callback function, can be executed whether the popup calendar is popped up or closed | function(status) | - |
 | onPanelChange | callback when picker panel mode is changed | function(value, mode) | - |
 
@@ -77,10 +77,10 @@ The following APIs are shared by DatePicker, MonthPicker, RangePicker, WeekPicke
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
-| defaultValue | to set default date, if start time or end time is null or undefined, the date range will be an open interval | [moment](http://momentjs.com/) | - |
 | defaultPickerValue | to set default picker date | [moment](http://momentjs.com/) | - |
+| defaultValue | to set default date, if start time or end time is null or undefined, the date range will be an open interval | [moment](http://momentjs.com/) | - |
 | disabledTime | to specify the time that cannot be selected | function(date) | - |
-| format | to set the date format, refer to [moment.js](http://momentjs.com/). When an array is provided, all values are used for parsing and first value is used for formatting. | string \| string[] | "YYYY-MM-DD" |
+| format | to set the date format, refer to [moment.js](http://momentjs.com/). When an array is provided, all values are used for parsing and first value is used for formatting. | string \| string\[] | "YYYY-MM-DD" |
 | renderExtraFooter | render extra footer in panel | (mode) => React.ReactNode | - |
 | showTime | to provide an additional time selection | object\|boolean | [TimePicker Options](/components/time-picker/#API) |
 | showTime.defaultValue | to set default time of selected date, [demo](#components-date-picker-demo-disabled-date) | [moment](http://momentjs.com/) | moment() |
@@ -93,8 +93,8 @@ The following APIs are shared by DatePicker, MonthPicker, RangePicker, WeekPicke
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
-| defaultValue | to set default date | [moment](http://momentjs.com/) | - |
 | defaultPickerValue | to set default picker date | [moment](http://momentjs.com/) | - |
+| defaultValue | to set default date | [moment](http://momentjs.com/) | - |
 | format | to set the date format, refer to [moment.js](http://momentjs.com/) | string | "YYYY-MM" |
 | monthCellContentRender | Custom month cell content render method | function(date, locale): ReactNode | - |
 | renderExtraFooter | render extra footer in panel | () => React.ReactNode | - |
@@ -105,21 +105,21 @@ The following APIs are shared by DatePicker, MonthPicker, RangePicker, WeekPicke
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
-| defaultValue | to set default date | [moment](http://momentjs.com/) | - |
 | defaultPickerValue | to set default picker date | [moment](http://momentjs.com/) | - |
+| defaultValue | to set default date | [moment](http://momentjs.com/) | - |
 | format | to set the date format, refer to [moment.js](http://momentjs.com/) | string | "YYYY-wo" |
+| renderExtraFooter | render extra footer in panel | (mode) => React.ReactNode | - |
 | value | to set date | [moment](http://momentjs.com/) | - |
 | onChange | a callback function, can be executed when the selected time is changing | function(date: moment, dateString: string) | - |
-| renderExtraFooter | render extra footer in panel | (mode) => React.ReactNode | - |
 
 ### RangePicker
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
+| defaultPickerValue | to set default picker date | \[[moment](http://momentjs.com/), [moment](http://momentjs.com/)] | - |  |
 | defaultValue | to set default date | \[[moment](http://momentjs.com/), [moment](http://momentjs.com/)] | - |  |
-| defaultPickerValue | to set default picker date | \[[moment](http://momentjs.com/), [moment](http://momentjs.com/)\] | - |  |
 | disabledTime | to specify the time that cannot be selected | function(dates: \[moment, moment], partial: `'start'|'end'`) | - |  |
-| format | to set the date format, refer to [moment.js](http://momentjs.com/). When an array is provided, all values are used for parsing and first value is used for formatting. | string \| string[] | "YYYY-MM-DD HH:mm:ss" |  |
+| format | to set the date format, refer to [moment.js](http://momentjs.com/). When an array is provided, all values are used for parsing and first value is used for formatting. | string \| string\[] | "YYYY-MM-DD HH:mm:ss" |  |
 | ranges | preseted ranges for quick selection | { \[range: string]: [moment](http://momentjs.com/)\[] } \| { \[range: string]: () => [moment](http://momentjs.com/)\[] } | - |  |
 | renderExtraFooter | render extra footer in panel | () => React.ReactNode | - |  |
 | separator | set separator between inputs | string | '~' | 3.14.0 |
