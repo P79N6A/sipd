@@ -104,7 +104,6 @@ export default class MainContent extends Component {
 
   getMenuItems(footerNavIcons = {}) {
     const { themeConfig } = this.props;
-    console.log(this.props)
     const {
       intl: { locale },
     } = this.context;

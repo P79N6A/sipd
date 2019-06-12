@@ -3,8 +3,6 @@
 const getWebpackConfig = require('antd-tools/lib/getWebpackConfig');
 const PacktrackerPlugin = require('@packtracker/webpack-plugin');
 
-console.log('webpack.config.js被使用！');
-
 const { webpack } = getWebpackConfig;
 
 // noParse still leave `require('./locale' + name)` in dist files
@@ -15,12 +13,18 @@ function ignoreMomentLocale(webpackConfig) {
 }
 
 function addLocales(webpackConfig) {
-  let packageName = 'antd-with-locales';
-  if (webpackConfig.entry['antd.min']) {
+  let packageName = 'spid-with-locales';
+  if (webpackConfig.entry['spid.min']) {
     packageName += '.min';
   }
   webpackConfig.entry[packageName] = './index-with-locales.js';
   webpackConfig.output.filename = '[name].js';
+  webpackConfig.externals.antd = {
+    root: 'antd',
+    commonjs2: 'antd',
+    commonjs: 'antd',
+    amd: 'antd',
+  };
 }
 
 function externalMoment(config) {
@@ -44,10 +48,9 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
         project_token: '8adbb892-ee4a-4d6f-93bb-a03219fb6778',
         upload: process.env.CI === 'true',
         fail_build: true,
-        exclude_assets: name => !['antd.min.js', 'antd.min.css'].includes(name),
+        exclude_assets: name => !['spid.min.js', 'spid.min.css'].includes(name),
       }),
     );
   });
 }
-
 module.exports = webpackConfig;

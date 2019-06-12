@@ -3,13 +3,13 @@ const chalk = require('chalk');
 
 $('dist')
   .isDirectory()
-  .hasFile('antd-with-locales.js')
-  .hasFile('antd-with-locales.min.js')
-  .hasFile('antd.css')
-  .hasFile('antd.min.css')
-  .hasFile('antd.js')
-  .hasFile('antd.min.js')
-  .hasFile('antd.less');
+  .hasFile('spid-with-locales.js')
+  .hasFile('spid-with-locales.min.js')
+  .hasFile('spid.css')
+  .hasFile('spid.min.css')
+  .hasFile('spid.js')
+  .hasFile('spid.min.js')
+  .hasFile('spid.less');
 
 // eslint-disable-next-line
 console.log(chalk.green('✨ `dist` directory is valid.'));

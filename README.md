@@ -77,7 +77,6 @@ See [i18n](http://ant.design/docs/react/i18n).
 - [Home page](http://ant.design/)
 - [Components](http://ant.design/docs/react/introduce)
 - [Ant Design Pro](http://pro.ant.design/)
-- [Change Log](CHANGELOG.en-US.md)
 - [rc-components](http://react-component.github.io/)
 - [Mobile UI](http://mobile.ant.design)
 - [Landing Pages](https://landing.ant.design)

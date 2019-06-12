@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'bisheng/router';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { Select, Menu, Row, Col, Icon, Popover, Input, Button, Badge } from 'antd';
+import { Select, Menu, Row, Col, Icon, Input, Button } from 'antd';
 import Santa from './Santa';
 import * as utils from '../utils';
 import { version as antdVersion } from '../../../../package.json';
@@ -43,13 +43,10 @@ export default class Header extends React.Component {
     isMobile: PropTypes.bool.isRequired,
   };
 
-  state = {
-    menuVisible: false,
-  };
+  state = {};
 
   componentDidMount() {
-    const { intl, router } = this.context;
-    router.listen(this.handleHideMenu);
+    const { intl } = this.context;
     const { searchInput } = this;
     document.addEventListener('keyup', event => {
       if (event.keyCode === 83 && event.target === document.body) {
@@ -58,24 +55,6 @@ export default class Header extends React.Component {
     });
     initDocSearch(intl.locale);
   }
-
-  handleShowMenu = () => {
-    this.setState({
-      menuVisible: true,
-    });
-  };
-
-  handleHideMenu = () => {
-    this.setState({
-      menuVisible: false,
-    });
-  };
-
-  onMenuVisibleChange = visible => {
-    this.setState({
-      menuVisible: visible,
-    });
-  };
 
   handleVersionChange = url => {
     const currentUrl = window.location.href;
@@ -105,7 +84,6 @@ export default class Header extends React.Component {
   };
 
   render() {
-    const { menuVisible } = this.state;
     const { isMobile } = this.context;
     const menuMode = isMobile ? 'inline' : 'horizontal';
     const { location, themeConfig } = this.props;
@@ -166,89 +144,17 @@ export default class Header extends React.Component {
             <FormattedMessage id="app.header.menu.home" />
           </Link>
         </Menu.Item>
-        <Menu.Item key="docs/spec">
-          <Link to={utils.getLocalizedPathname('/docs/spec/introduce', isZhCN)}>
-            <FormattedMessage id="app.header.menu.spec" />
-          </Link>
-        </Menu.Item>
         <Menu.Item key="docs/react">
           <Link to={utils.getLocalizedPathname('/docs/react/introduce', isZhCN)}>
             <FormattedMessage id="app.header.menu.components" />
           </Link>
         </Menu.Item>
-        <Menu.SubMenu
-          key="ecosystem"
-          className="hide-in-home-page"
-          title={
-            <Badge dot>
-              <FormattedMessage id="app.header.menu.ecosystem" />
-            </Badge>
-          }
-        >
-          <Menu.Item key="pro">
-            <a
-              href="http://pro.ant.design"
-              className="header-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Badge dot>
-                <FormattedMessage id="app.header.menu.pro.v4" />
-              </Badge>
-            </a>
-          </Menu.Item>
-          <Menu.Item key="ng">
-            <a
-              href="http://ng.ant.design"
-              className="header-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ant Design of Angular
-            </a>
-          </Menu.Item>
-          <Menu.Item key="vue">
-            <a
-              href="http://vue.ant.design"
-              className="header-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ant Design of Vue
-            </a>
-          </Menu.Item>
-          {isZhCN ? (
-            <Menu.Item key="course" className="hide-in-home-page">
-              <a
-                href="https://www.yuque.com/ant-design/course"
-                className="header-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ant Design 实战教程
-              </a>
-            </Menu.Item>
-          ) : null}
-        </Menu.SubMenu>
       </Menu>,
     ];
 
-    const searchPlaceholder = locale === 'zh-CN' ? '在 ant.design 中搜索' : 'Search in ant.design';
+    const searchPlaceholder = locale === 'zh-CN' ? '在 spid 中搜索' : 'Search in spid';
     return (
       <header id="header" className={headerClassName}>
-        {isMobile && (
-          <Popover
-            overlayClassName="popover-menu"
-            placement="bottomRight"
-            content={menu}
-            trigger="click"
-            visible={menuVisible}
-            arrowPointAtCenter
-            onVisibleChange={this.onMenuVisibleChange}
-          >
-            <Icon className="nav-phone-icon" type="menu" onClick={this.handleShowMenu} />
-          </Popover>
-        )}
         <Row>
           <Col xxl={4} xl={5} lg={5} md={5} sm={24} xs={24}>
             <Link to={utils.getLocalizedPathname('/', isZhCN)} id="logo">

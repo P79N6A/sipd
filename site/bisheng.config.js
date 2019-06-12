@@ -29,7 +29,6 @@ module.exports = {
   source: {
     components: './components',
     docs: './docs',
-    changelog: ['CHANGELOG.zh-CN.md', 'CHANGELOG.en-US.md'],
   },
   theme: './site/theme',
   htmlTemplate: './site/theme/static/template.html',
@@ -44,6 +43,7 @@ module.exports = {
       Patterns: 3,
       其他: 6,
       Other: 6,
+      通用组件: 100,
       Components: 100,
     },
     typeOrder: {
@@ -65,12 +65,7 @@ module.exports = {
       废弃: 7,
     },
     docVersions: {
-      '0.9.x': 'http://09x.ant.design',
-      '0.10.x': 'http://010x.ant.design',
-      '0.11.x': 'http://011x.ant.design',
-      '0.12.x': 'http://012x.ant.design',
-      '1.x': 'http://1x.ant.design',
-      '2.x': 'http://2x.ant.design',
+      '1.0.0': 'http://ant.design',
     },
   },
   filePathMapper(filePath) {
@@ -94,9 +89,9 @@ module.exports = {
   webpackConfig(config) {
     // eslint-disable-next-line
     config.resolve.alias = {
-      'antd/lib': path.join(process.cwd(), 'components'),
-      'antd/es': path.join(process.cwd(), 'components'),
-      antd: path.join(process.cwd(), 'index'),
+      'spid/lib': path.join(process.cwd(), 'components'),
+      'spid/es': path.join(process.cwd(), 'components'),
+      spid: path.join(process.cwd(), 'index'),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };
@@ -113,6 +108,7 @@ module.exports = {
         'react-dom': 'preact-compat',
         'create-react-class': 'preact-compat/lib/create-react-class',
         'react-router': 'react-router',
+        antd: 'antd',
       });
     }
 

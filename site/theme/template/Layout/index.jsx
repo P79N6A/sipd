@@ -5,13 +5,12 @@ import { enquireScreen } from 'enquire-js';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import 'moment/locale/zh-cn';
 import { LocaleProvider } from 'antd';
-import LogRocket from 'logrocket';
-import setupLogRocketReact from 'logrocket-react';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import Header from './Header';
 import enLocale from '../../en-US';
 import cnLocale from '../../zh-CN';
 import * as utils from '../utils';
+import * as spid from '../../../../index';
 
 if (typeof window !== 'undefined' && navigator.serviceWorker) {
   navigator.serviceWorker.getRegistrations().then(registrations => {
@@ -26,6 +25,9 @@ if (typeof window !== 'undefined') {
   // Expose to iframe
   window.react = React;
   window['react-dom'] = ReactDOM;
+  /* eslint-disable no-unresolved */
+  window.spid = spid;
+  /* eslint-disable no-unresolved */
   window.antd = require('antd');
   /* eslint-enable global-require */
 
@@ -37,11 +39,6 @@ if (typeof window !== 'undefined') {
       e.stopImmediatePropagation();
     }
   });
-
-  if (process.env.NODE_ENV === 'production') {
-    LogRocket.init('kpuw4z/ant-design');
-    setupLogRocketReact(LogRocket);
-  }
 }
 
 let isMobile = false;
@@ -76,17 +73,17 @@ export default class Layout extends React.Component {
   }
 
   componentDidMount() {
-    const { router } = this.context;
-    router.listen(loc => {
-      if (typeof window.ga !== 'undefined') {
-        window.ga('send', 'pageview', loc.pathname + loc.search);
-      }
-      // eslint-disable-next-line
-      if (typeof window._hmt !== 'undefined') {
-        // eslint-disable-next-line
-        window._hmt.push(['_trackPageview', loc.pathname + loc.search]);
-      }
-    });
+    // const { router } = this.context;
+    // router.listen(loc => {
+    //   if (typeof window.ga !== 'undefined') {
+    //     window.ga('send', 'pageview', loc.pathname + loc.search);
+    //   }
+    //   // eslint-disable-next-line
+    //   if (typeof window._hmt !== 'undefined') {
+    //     // eslint-disable-next-line
+    //     window._hmt.push(['_trackPageview', loc.pathname + loc.search]);
+    //   }
+    // });
 
     const nprogressHiddenStyle = document.getElementById('nprogress-style');
     if (nprogressHiddenStyle) {

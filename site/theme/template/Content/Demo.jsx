@@ -106,7 +106,6 @@ export default class Demo extends React.Component {
     const { props } = this;
     const { meta, src, content, preview, highlightedCode, style, highlightedStyle, expand } = props;
     const { copied } = state;
-    console.log(props);
     if (!this.liveDemo) {
       this.liveDemo = meta.iframe ? (
         <BrowserFrame>
