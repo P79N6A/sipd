@@ -14,10 +14,10 @@ title:
 The simplest usage.
 
 ```jsx
-import { AuthWidget } from 'antd';
+import { AuthWidget } from 'spid';
 import { Button } from 'antd';
 
 const AuthButton = AuthWidget(Button);
 
-ReactDOM.render(<AuthButton />, mountNode);
+ReactDOM.render(<AuthButton type="primary">123</AuthButton>, mountNode);
 ```

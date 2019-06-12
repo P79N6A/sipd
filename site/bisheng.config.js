@@ -29,6 +29,7 @@ module.exports = {
   source: {
     components: './components',
     docs: './docs',
+    changelog: ['CHANGELOG.zh-CN.md', 'CHANGELOG.en-US.md'],
   },
   theme: './site/theme',
   htmlTemplate: './site/theme/static/template.html',
@@ -43,7 +44,6 @@ module.exports = {
       Patterns: 3,
       其他: 6,
       Other: 6,
-      通用组件: 100,
       Components: 100,
     },
     typeOrder: {
@@ -108,7 +108,6 @@ module.exports = {
         'react-dom': 'preact-compat',
         'create-react-class': 'preact-compat/lib/create-react-class',
         'react-router': 'react-router',
-        antd: 'antd',
       });
     }
 
@@ -128,7 +127,7 @@ module.exports = {
     public: process.env.DEV_HOST || 'localhost',
     disableHostCheck: !!process.env.DEV_HOST,
   },
-
+  root: './',
   htmlTemplateExtraData: {
     isDev,
     usePreact,

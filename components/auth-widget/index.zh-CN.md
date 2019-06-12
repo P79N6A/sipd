@@ -1,7 +1,7 @@
 ---
 category: Components
-subtitle: Input
-type: Data Entry
+subtitle: 输入框
+type: 数据录入
 title: Input
 ---
 

@@ -77,6 +77,7 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 - [首页](http://ant.design/)
 - [组件库](http://ant.design/docs/react/introduce)
 - [Ant Design Pro](http://pro.ant.design/)
+- [更新日志](CHANGELOG.en-US.md)
 - [React 底层基础组件](http://react-component.github.io/)
 - [移动端组件](http://mobile.ant.design)
 - [首页模板集](https://landing.ant.design)
