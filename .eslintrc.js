@@ -43,6 +43,8 @@ if (process.env.RUN_ENV === 'DEMO') {
     React: true,
     ReactDOM: true,
     mountNode: true,
+    antd: true,
+    sipd: true,
   };
 
   Object.assign(eslintrc.rules, {
@@ -56,11 +58,6 @@ if (process.env.RUN_ENV === 'DEMO') {
     'react/destructuring-assignment': 0,
     'react/no-multi-comp': 0,
     'jsx-a11y/href-no-hash': 0,
-    'prefer-destructuring': 0, // TODO: remove later
-    'max-len': 0, // TODO: remove later
-    'consistent-return': 0, // TODO: remove later
-    'no-return-assign': 0, // TODO: remove later
-    'no-param-reassign': 0, // TODO: remove later
     'import/no-extraneous-dependencies': 0,
   });
 }

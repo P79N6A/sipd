@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Anchor from '..';
+import { Anchor } from 'antd';
 
 const { Link } = Anchor;
 

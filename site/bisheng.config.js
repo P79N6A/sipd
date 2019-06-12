@@ -108,6 +108,7 @@ module.exports = {
         'react-dom': 'preact-compat',
         'create-react-class': 'preact-compat/lib/create-react-class',
         'react-router': 'react-router',
+        sipd: path.join(process.cwd(), 'index'),
       });
     }
 

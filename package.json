@@ -192,7 +192,7 @@
     "lint": "npm run lint:ts && npm run lint:es && npm run lint:demo && npm run lint:style && npm run lint:deps",
     "lint:deps": "antd-tools run deps-lint",
     "lint:ts": "npm run tsc && antd-tools run ts-lint",
-    "lint:es": "eslint ./.*.js ./webpack.config.js --ext '.js,.jsx' --debug",
+    "lint:es": "eslint ./.*.js ./webpack.config.js --ext '.js,.jsx'",
     "lint:md": "remark components/",
     "lint:demo": "cross-env RUN_ENV=DEMO eslint components/*/demo/*.md --ext '.md'",
     "lint:style": "stylelint '{site,components}/**/*.less' --syntax less",

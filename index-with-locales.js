@@ -8,5 +8,6 @@ req.keys().forEach(mod => {
   const matches = mod.match(/\/([^/]+).tsx$/);
   sipd.locales[matches[1]] = req(mod).default;
 });
+console.log(sipd);
 
 module.exports = sipd;

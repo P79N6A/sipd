@@ -68,3 +68,11 @@ Array [
   "version",
 ]
 `;
+
+exports[`sipd exports modules correctly 1`] = `
+Array [
+  "AuthWidget",
+  "AuthInput",
+  "version",
+]
+`;
