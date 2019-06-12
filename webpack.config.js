@@ -13,8 +13,8 @@ function ignoreMomentLocale(webpackConfig) {
 }
 
 function addLocales(webpackConfig) {
-  let packageName = 'spid-with-locales';
-  if (webpackConfig.entry['spid.min']) {
+  let packageName = 'sipd-with-locales';
+  if (webpackConfig.entry['sipd.min']) {
     packageName += '.min';
   }
   webpackConfig.entry[packageName] = './index-with-locales.js';
@@ -48,7 +48,7 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
         project_token: '8adbb892-ee4a-4d6f-93bb-a03219fb6778',
         upload: process.env.CI === 'true',
         fail_build: true,
-        exclude_assets: name => !['spid.min.js', 'spid.min.css'].includes(name),
+        exclude_assets: name => !['sipd.min.js', 'sipd.min.css'].includes(name),
       }),
     );
   });

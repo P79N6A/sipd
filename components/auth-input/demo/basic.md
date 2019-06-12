@@ -14,7 +14,7 @@ title:
 Basic usage example.
 
 ```jsx
-import { AuthInput } from 'spid';
+import { AuthInput } from 'sipd';
 
 ReactDOM.render(<AuthInput authCode="authcode" />, mountNode);
 ```

@@ -1,12 +1,12 @@
-const spid = require('./components');
+const sipd = require('./components');
 
 const req = require.context('./components', true, /^\.\/locale-provider\/.+_.+\.tsx$/);
 
-spid.locales = {};
+sipd.locales = {};
 
 req.keys().forEach(mod => {
   const matches = mod.match(/\/([^/]+).tsx$/);
-  spid.locales[matches[1]] = req(mod).default;
+  sipd.locales[matches[1]] = req(mod).default;
 });
 
-module.exports = spid;
+module.exports = sipd;

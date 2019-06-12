@@ -10,7 +10,7 @@ import Header from './Header';
 import enLocale from '../../en-US';
 import cnLocale from '../../zh-CN';
 import * as utils from '../utils';
-import * as spid from '../../../../index';
+import * as sipd from '../../../../index';
 
 if (typeof window !== 'undefined' && navigator.serviceWorker) {
   navigator.serviceWorker.getRegistrations().then(registrations => {
@@ -26,7 +26,7 @@ if (typeof window !== 'undefined') {
   window.react = React;
   window['react-dom'] = ReactDOM;
   /* eslint-disable no-unresolved */
-  window.spid = spid;
+  window.sipd = sipd;
   /* eslint-disable no-unresolved */
   window.antd = require('antd');
   /* eslint-enable global-require */

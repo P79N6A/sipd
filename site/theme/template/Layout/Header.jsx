@@ -152,7 +152,7 @@ export default class Header extends React.Component {
       </Menu>,
     ];
 
-    const searchPlaceholder = locale === 'zh-CN' ? '在 spid 中搜索' : 'Search in spid';
+    const searchPlaceholder = locale === 'zh-CN' ? '在 sipd 中搜索' : 'Search in sipd';
     return (
       <header id="header" className={headerClassName}>
         <Row>

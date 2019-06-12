@@ -14,7 +14,7 @@ title:
 The simplest usage.
 
 ```jsx
-import { AuthWidget } from 'spid';
+import { AuthWidget } from 'sipd';
 import { Button } from 'antd';
 
 const AuthButton = AuthWidget(Button);

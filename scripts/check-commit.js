@@ -15,13 +15,14 @@ function exitProcess(code = 1) {
 }
 
 async function checkVersion() {
-  const res = await fetch('http://registry.npmjs.org/antd').then(response => response.json());
-  console.log(res);
-  const { versions } = res;
-  if (version in versions) {
-    console.log(chalk.yellow('😈 Current version already exists. Forget update package.json?'));
-    console.log(chalk.cyan(' => Current:'), version);
-    exitProcess(0);
+  const res = await fetch('http://registry.npmjs.org/sipd').then(response => response.json());
+  if (!res.error) {
+    const { versions } = res;
+    if (version in versions) {
+      console.log(chalk.yellow('😈 Current version already exists. Forget update package.json?'));
+      console.log(chalk.cyan(' => Current:'), version);
+      exitProcess(0);
+    }
   }
 }
 
